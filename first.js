@@ -11,6 +11,7 @@ $(document).keypress(function () {
         seq();
         started = true;
         $("#inst").addClass("hide");
+        $("#remove").addClass("hide");
     }
 });
 
@@ -20,6 +21,7 @@ $(document).click(function () {
         seq();
         started = true;
         $("#inst").addClass("hide");
+        $("#remove").addClass("hide");
     }
 });
 
@@ -49,7 +51,8 @@ function checkAnswer(clevel) {
         setTimeout(function() {
             $("body").removeClass("game-over");
         },200);
-        $("#level-title").text("Game Over, Press any key To start");
+        $("#level-title").text("Game Over, Press any key To start or click anywhere");
+        $("#remove").removeClass("hide");
         startAgain();
     }
  }
