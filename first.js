@@ -14,6 +14,15 @@ $(document).keypress(function () {
     }
 });
 
+$(document).click(function () { 
+    if(!started){
+        $("#level-title").text("Level "+level);
+        seq();
+        started = true;
+        $("#inst").addClass("hide");
+    }
+});
+
 $(".btn").click(function () {
     var userClicked = $(this).attr("id");  
     userPattern.push(userClicked);
